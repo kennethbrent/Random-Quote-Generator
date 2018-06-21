@@ -11,7 +11,7 @@ document.getElementById('loadQuote').addEventListener("click", () => {
 });
 
 
-var quotes = [
+const quotes = [
 	
 	
 	{
@@ -73,6 +73,13 @@ var quotes = [
 		source: "Steven Tyler"
 		
 		
+	},
+	
+	{
+		
+		quote : "Seize the day, else your dreams and aspirations will fade away.",
+		source: "Unknown"
+		
 	}
 	
 ];
@@ -83,7 +90,7 @@ var quotes = [
 
 	
 function printQuote(){
-	var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+	const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 	document.getElementById("quote").innerHTML = randomQuote.quote;
 	document.getElementById("source").innerHTML = randomQuote.source;
 	
@@ -91,9 +98,9 @@ function printQuote(){
 
 
 	function getRandomColor() {
-		var letters = '0123456789ABCDEF';
-  		var color = '#';
-		for (var i = 0; i < 6; i++) {
+		const letters = '0123456789ABCDEF';
+  		let color = '#';
+		for (let i = 0; i < 6; i++) {
 		color += letters[Math.floor(Math.random() * 16)];
   }
   return color;
